@@ -1,0 +1,21 @@
+/* Responsive YouTube embed fix
+   Forces YouTube videos inside Weebly's .wsite-youtube-container
+   to scale properly to their container width, at a standard 16:9
+   aspect ratio, regardless of any conflicting/missing original CSS. */
+
+.wsite-youtube-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.wsite-youtube-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
